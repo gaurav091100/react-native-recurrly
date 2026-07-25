@@ -1,5 +1,8 @@
 import type { ImageSourcePropType } from "react-native";
 
+declare module "*.css";
+declare module "@/global.css";
+
 declare global {
     interface AppTab {
         name: string;
@@ -49,6 +52,7 @@ declare global {
 
     interface ListHeadingProps {
         title: string;
+        onViewAll?: () => void;
     }
 }
 
