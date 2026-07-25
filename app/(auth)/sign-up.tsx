@@ -84,8 +84,8 @@ const SignUp = () => {
     // Show verification screen if email needs verification
     if (
         signUp.status === 'missing_requirements' &&
-        signUp.unverifiedFields.includes('email_address') &&
-        signUp.missingFields.length === 0
+        signUp.unverifiedFields?.includes('email_address') &&
+        (signUp.missingFields?.length ?? 0) === 0
     ) {
         return (
             <SafeAreaView className="auth-safe-area">
