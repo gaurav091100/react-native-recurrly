@@ -75,7 +75,7 @@ const SignIn = () => {
       console.log("MFA required");
     } else if (signIn.status === "needs_client_trust") {
       // Send email code for client trust verification
-      const emailCodeFactor = signIn.supportedSecondFactors.find(
+      const emailCodeFactor = signIn.supportedSecondFactors?.find(
         (factor) => factor.strategy === "email_code",
       );
 
